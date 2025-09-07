@@ -1,6 +1,6 @@
-.vscode
+.vscode/
 
-# Pylance
+# Pylance / Pyright
 pyrightconfig.json
 
 # Byte-compiled / optimized / DLL files
@@ -31,8 +31,6 @@ wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -40,9 +38,11 @@ MANIFEST
 pip-log.txt
 pip-delete-this-directory.txt
 
+# Project-specific generated outputs
 syn_out/
 checkpoints/
-.gradio
+.gradio/
 
-# Ignore generated sample .wav files
-**/*.wav
+# Ignore only generated .wav files inside output folders, but keep others
+syn_out/**/*.wav
+checkpoints/**/*.wav
